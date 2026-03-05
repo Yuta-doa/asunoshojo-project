@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>昨日を失くした明日の少女 | 公式サイト</title>
+    <style>
+        /* 全体のスタイル */
+        body {
+            background-color: #000; /* 背景は黒でシリアスに */
+            color: #fff;
+            font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+        }
+
+        /* アクセントカラー（シアンブルー） */
+        :root {
+            --accent-color: #00ffff; 
+        }
+
+        /* メインビジュアル（チラシ画像） */
+        .hero {
+            width: 100%;
+            height: 100vh;
+            background: url('昨日を失くした明日の少女チラシ.jpg') no-repeat center center;
+            background-size: cover;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            align-items: center;
+            padding-bottom: 50px;
+        }
+
+        /* キャッチコピーのアニメーション */
+        .catchphrase {
+            font-size: 1.5rem;
+            text-shadow: 0 0 10px rgba(0,0,0,0.8);
+            margin-bottom: 20px;
+            animation: fadeIn 3s ease-in-out;
+        }
+
+        /* コンテンツセクション */
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        h2 {
+            border-bottom: 2px solid var(--accent-color);
+            display: inline-block;
+            padding-bottom: 5px;
+            margin-bottom: 30px;
+        }
+
+        /* 動画埋め込み（15s広告） */
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            margin-bottom: 50px;
+        }
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        /* あらすじテキスト */
+        .story-text {
+            line-height: 1.8;
+            text-align: left;
+            background: rgba(255, 255, 255, 0.05);
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+
+    <section class="hero">
+        <div class="catchphrase">信じるのは未来か それとも過去の自分か</div>
+        <p>2026年7月3日 放送開始予定！</p>
+    </section>
+
+    <div class="container">
+        <section id="pv">
+            <h2>SPECIAL MOVIE</h2>
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/VIDEO_ID" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </section>
+
+        <section id="story">
+            <h2>STORY</h2>
+            <div class="story-text">
+                <p>2045年。舞台は日本、いや荒廃し枯れ果てた日本だ。</p>
+                <p>日本なのに荒廃し枯れ果てている、一体なぜなのか。</p>
+                <p>そして、この世界は本当に日本なのか、はたまたまず、2045年なのだろうか。</p>
+                <p>もしかしたら、この世界は仮想空間なのかもしれない。</p>
+            </div>
+        </section>
+    </div>
+
+</body>
+</html>
