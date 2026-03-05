@@ -32,6 +32,7 @@
             width: 100%;
             display: flex;
             justify-content: flex-end;
+            box-sizing: border-box;
         }
 
         nav a {
@@ -49,11 +50,12 @@
             text-shadow: 0 0 10px var(--accent-color);
         }
 
-        /* メインビジュアル（1920x1080サイズの画像 2.jpg を使用） */
+        /* メインビジュアルの修正：backgroundプロパティで画像を指定します */
         .hero {
             width: 100%;
             height: 100vh;
-            background: url('2.jpg') no-repeat center center;
+            /* 画像のパスをここに記述 */
+            background: url('P1 2026-03-05 23-36-32.jpg') no-repeat center center;
             background-size: cover;
             display: flex;
             flex-direction: column;
@@ -68,6 +70,7 @@
             text-shadow: 2px 2px 10px rgba(0,0,0,1);
             margin-bottom: 10px;
             animation: fadeIn 3s ease-in-out;
+            text-align: center;
         }
 
         /* コンテンツエリア */
@@ -101,13 +104,36 @@
             font-size: 1.1rem;
         }
 
+        /* 動画の大きさを調整する枠 */
+        .video-wrapper {
+            max-width: 800px;
+            margin: 0 auto;
+            width: 100%;
+        }
+
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9比率 */
+            height: 0;
+            overflow: hidden;
+            background: #111;
+        }
+
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
         /* アニメーション */
         @keyframes fadeIn {
             from { opacity: 0; transform: translateY(20px); }
             to { opacity: 1; transform: translateY(0); }
         }
 
-        /* レスポンシブ対応（スマホ表示） */
+        /* レスポンシブ対応 */
         @media (max-width: 600px) {
             nav { padding: 15px; justify-content: center; }
             nav a { margin: 0 10px; font-size: 0.9rem; }
@@ -119,11 +145,11 @@
 
     <nav>
         <a href="#story">STORY</a>
-        <a href="/onair" style="color: var(--accent-color);">ON AIR</a>
+        <a href="onair.html" style="color: var(--accent-color);">ON AIR</a>
         <a href="#special">SPECIAL</a>
     </nav>
 
-    <section class="/image/P1 2026-03-05 23-36-32.png">
+    <section class="hero">
         <div class="catchphrase">信じるのは未来か それとも過去の自分か</div>
         <p style="font-size: 1.2rem; text-shadow: 2px 2px 5px #000;">2026年7月3日 24:00 放送開始予定</p>
     </section>
@@ -140,10 +166,12 @@
         </section>
 
         <section id="special">
-            <h2>SPECIAL</h2>
+            <h2>SPECIAL MOVIE</h2>
             <p>15s CM 公開中</p>
-            <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; background: #111;">
-                <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); color: #444;">MOVIE PLAYER</div>
+            <div class="video-wrapper">
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/XBkEoj6xHFE" title="Coming Soon..." frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
             </div>
         </section>
     </div>
