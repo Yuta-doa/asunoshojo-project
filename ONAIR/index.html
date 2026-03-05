@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>昨日を失くした明日の少女 | 公式サイト</title>
+    <style>
+        body {
+            background-color: #000;
+            color: #fff;
+            font-family: sans-serif;
+            margin: 0;
+            scroll-behavior: smooth; /* スムーズにスクロールさせる */
+        }
+
+        :root {
+            --accent-color: #00ffff; 
+        }
+
+        /* 右上のナビゲーション */
+        nav {
+            position: fixed;
+            top: 0;
+            right: 0;
+            padding: 20px 40px;
+            z-index: 100;
+            background: linear-gradient(to bottom, rgba(0,0,0,0.8), transparent);
+            width: 100%;
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin-left: 30px;
+            font-weight: bold;
+            font-size: 1.1rem;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--accent-color);
+            text-shadow: 0 0 10px var(--accent-color);
+        }
+
+        /* メインビジュアル（1920x1080サイズを使用） */
+        .hero {
+            width: 100%;
+            height: 100vh;
+            background: url('1.jpg') no-repeat center center;
+            background-size: cover;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 100px 20px;
+            text-align: center;
+        }
+
+        section {
+            margin-bottom: 100px;
+        }
+
+        h2 {
+            border-bottom: 2px solid var(--accent-color);
+            padding-bottom: 10px;
+            margin-bottom: 40px;
+            letter-spacing: 3px;
+        }
+
+        /* ON AIR情報のスタイル */
+        .onair-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            text-align: left;
+            background: rgba(0, 255, 255, 0.05);
+            padding: 30px;
+            border: 1px solid rgba(0, 255, 255, 0.2);
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="#story">STORY</a>
+        <a href="#onair">ON AIR</a>
+        <a href="#special">SPECIAL</a>
+    </nav>
+
+    <section class="hero">
+        </section>
+
+    <div class="container">
+        <section id="onair">
+            <h2>ON AIR</h2>
+            <p style="font-size: 1.2rem; color: var(--accent-color);">2026年7月3日より順次放送開始予定！</p>
+            <div class="onair-grid">
+                <div>DCK / 動画係サークル</div><div>24:00～</div>
+                <div>砂糖凪沙</div><div>24:00～</div>
+                <div>Sky System 放送技術研究所</div><div>25:00～</div>
+            </div>
+        </section>
+
+        <section id="story">
+            <h2>STORY</h2>
+            <p>2045年。世界は終わった……はずだった。</p>
+            <p>もしかしたら、この世界は仮想空間なのかもしれない。</p>
+        </section>
+    </div>
+
+</body>
+</html>
