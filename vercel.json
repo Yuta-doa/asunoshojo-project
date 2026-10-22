@@ -1,9 +1,1 @@
-{
-  "redirects": [
-    {
-      "source": "/(.*)",
-      "destination": "/302.html",
-      "permanent": true
-    }
-  ]
-}
+
