@@ -1,17 +1,10 @@
-/** @type {import('next').NextConfig} */
-const nextConfig = {
-  typedRoutes: true, // 型安全なルーティングを有効化
+{
+  "redirects": [
+    {
+      "source": "/((?!302\\.html$).*)",
+      "destination": "/302.html",
+      "permanent": false
+    }
+  ]
+}
 
-  async redirects() {
-    return [
-      {
-        // 「/302」以外のすべてのページへのアクセスを対象にする（無限ループ防止）
-        source: '/:path((?!302$).*)',
-        destination: '/302.html',
-        permanent: false, // メンテナンス等の場合は302（一時的）にするのがSEO的に安全です
-      },
-    ]
-  },
-};
-
-module.exports = nextConfig;
