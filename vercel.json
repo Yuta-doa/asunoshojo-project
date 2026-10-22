@@ -1,0 +1,16 @@
+{
+  "redirects": [
+    {
+      "source": "/((?!302\\.html$).*)",
+      "has": [
+        {
+          "type": "header",
+          "key": "accept-language",
+          "value": "(^|,)\\s*ja"
+        }
+      ],
+      "destination": "/302.html",
+      "permanent": false
+    }
+  ]
+}
